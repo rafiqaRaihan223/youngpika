@@ -1,0 +1,3558 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Untuk Wanda Putri Zahra</title>
+
+<style>
+
+/* =====================================================
+   BASIC
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#09090c;
+    --bg2:#151318;
+    --white:#f5f2ed;
+    --muted:#aaa6a1;
+    --gold:#e6c8a5;
+    --line:rgba(255,255,255,.13);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #211d25 0%,
+            #09090c 45%,
+            #050507 100%
+        );
+    color:var(--white);
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+}
+
+#stars{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+#intro{
+    position:fixed;
+    inset:0;
+    background:#08080b;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    z-index:9999;
+    transition:1s ease;
+}
+
+.intro-content{
+    max-width:700px;
+    padding:30px;
+}
+
+.intro-small{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.intro-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(48px,8vw,90px);
+    line-height:.95;
+    margin-bottom:30px;
+}
+
+.intro-text{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.9;
+    margin-bottom:40px;
+}
+
+.open-btn{
+    background:none;
+    color:var(--white);
+    border:1px solid var(--line);
+    padding:15px 30px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:11px;
+    cursor:pointer;
+    transition:.4s ease;
+}
+
+.open-btn:hover{
+    background:var(--white);
+    color:#111;
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+#musicBtn{
+    position:fixed;
+    top:25px;
+    right:25px;
+    z-index:1000;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:rgba(10,10,12,.65);
+    backdrop-filter:blur(10px);
+    color:var(--white);
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main{
+    width:100%;
+}
+
+section{
+    min-height:100vh;
+    padding:130px 8%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    width:100%;
+}
+
+.small{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+h1,
+h2,
+h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+}
+
+h1{
+    font-size:clamp(80px,14vw,180px);
+    line-height:.78;
+    letter-spacing:-6px;
+}
+
+h2{
+    font-size:clamp(48px,7vw,90px);
+    line-height:.9;
+    margin-bottom:35px;
+}
+
+p{
+    color:var(--muted);
+    font-size:15px;
+    line-height:2;
+    max-width:650px;
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.hero{
+    text-align:center;
+    position:relative;
+}
+
+.hero .container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero p{
+    margin-top:45px;
+    max-width:650px;
+}
+
+.scroll-down{
+    position:absolute;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:10px;
+    letter-spacing:4px;
+    color:#777;
+}
+
+
+/* =====================================================
+   PHOTO SECTION
+===================================================== */
+
+.photo-intro{
+    margin-bottom:60px;
+}
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,360px));
+    justify-content:center;
+    gap:75px 50px;
+    margin-top:70px;
+}
+
+.photo-frame{
+    background:#eee8e0;
+    padding:8px 8px 28px;
+    box-shadow:0 25px 60px rgba(0,0,0,.4);
+    width:100%;
+}
+
+.photo-frame img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    display:block;
+    cursor:pointer;
+}
+
+.photo-caption{
+    color:#171717;
+    padding:18px 8px 0;
+    text-align:center;
+}
+
+.photo-caption h3{
+    font-size:27px;
+    margin-bottom:8px;
+}
+
+.photo-caption p{
+    color:#555;
+    font-size:12px;
+    line-height:1.7;
+    margin:auto;
+}
+
+.gallery-note{
+    text-align:center;
+    margin:80px auto 0;
+    font-family:'Cormorant Garamond',serif;
+    font-size:25px;
+    color:#cfc8c0;
+}
+
+.quote{
+    margin:45px 0;
+    padding-left:30px;
+    border-left:1px solid var(--gold);
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(25px,4vw,42px);
+    line-height:1.35;
+    color:#ddd5cd;
+}
+
+.letter{
+    max-width:760px;
+    margin:auto;
+}
+
+.letter p{
+    margin-bottom:30px;
+}
+
+.letter .big{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(35px,5vw,60px);
+    color:var(--white);
+    margin:50px 0;
+}
+
+.final{
+    text-align:center;
+}
+
+.final p{
+    margin:0 auto 30px;
+}
+
+.signature{
+    margin-top:70px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:38px;
+    color:var(--gold);
+}
+
+
+/* =====================================================
+   IMAGE MODAL
+===================================================== */
+
+#imageModal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:10000;
+    padding:30px;
+}
+
+#imageModal img{
+    max-width:90%;
+    max-height:90vh;
+    object-fit:contain;
+    box-shadow:0 30px 100px rgba(0,0,0,.6);
+}
+
+.close-modal{
+    position:absolute;
+    top:25px;
+    right:30px;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    padding:40px 20px;
+    text-align:center;
+    color:#666;
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+
+/* =====================================================
+   FINALE BUTTON
+===================================================== */
+
+.finale-btn{
+    margin-top:50px;
+    background:none;
+    color:var(--gold);
+    border:1px solid var(--gold);
+    padding:16px 34px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-size:11px;
+    cursor:pointer;
+    transition:.4s ease;
+    animation:glow 2.8s ease-in-out infinite;
+}
+
+.finale-btn:hover{
+    background:var(--gold);
+    color:#111;
+}
+
+@keyframes glow{
+
+    0%,100%{
+        box-shadow:0 0 0 rgba(230,200,165,0);
+    }
+
+    50%{
+        box-shadow:0 0 28px rgba(230,200,165,.35);
+    }
+
+}
+
+
+/* =====================================================
+   FINALE GALAXY
+===================================================== */
+
+#finale{
+    position:fixed;
+    inset:0;
+    z-index:9998;
+    background:#020205;
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .9s ease,visibility .9s;
+    overflow:hidden;
+}
+
+#finale.show{
+    opacity:1;
+    visibility:visible;
+}
+
+#finaleCanvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:block;
+    z-index:0;
+    touch-action:none;
+    cursor:grab;
+}
+
+#finaleCanvas:active{
+    cursor:grabbing;
+}
+
+
+/* =====================================================
+   HINT
+===================================================== */
+
+#hint{
+    position:absolute;
+
+    top:30px;
+
+    left:0;
+    right:0;
+
+    text-align:center;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:var(--gold);
+
+    opacity:0;
+
+    transition:1.2s ease;
+
+    pointer-events:none;
+
+    padding:0 90px;
+
+    z-index:8;
+}
+
+#hint.in{
+    opacity:.85;
+}
+
+
+/* =====================================================
+   FLASH
+===================================================== */
+
+#flash{
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff 0%,
+            #ffe9d0 40%,
+            #ffd0e0 100%
+        );
+
+    opacity:0;
+
+    pointer-events:none;
+
+    z-index:6;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.finale-back{
+    position:absolute;
+
+    top:25px;
+    left:25px;
+
+    z-index:10;
+
+    background:rgba(10,10,12,.55);
+
+    color:var(--white);
+
+    border:1px solid var(--line);
+
+    padding:10px 18px;
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    section{
+        padding:100px 7%;
+    }
+
+    h1{
+        font-size:72px;
+        letter-spacing:-3px;
+    }
+
+    h2{
+        font-size:55px;
+    }
+
+    .photo-grid{
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+
+        justify-content:center;
+
+        gap:32px 12px;
+
+        margin-top:50px;
+
+        width:100%;
+    }
+
+    .photo-frame{
+        width:100%;
+        max-width:none;
+        margin:0;
+        padding:5px 5px 15px;
+    }
+
+    .photo-frame img{
+        width:100%;
+        height:auto;
+        display:block;
+    }
+
+    .photo-caption{
+        padding:10px 3px 0;
+    }
+
+    .photo-caption h3{
+        font-size:16px;
+        line-height:1.1;
+        margin-bottom:6px;
+    }
+
+    .photo-caption p{
+        font-size:9px;
+        line-height:1.5;
+    }
+
+    .gallery-note{
+        margin-top:55px;
+        font-size:20px;
+    }
+
+    .quote{
+        padding-left:20px;
+    }
+
+    #musicBtn{
+        top:15px;
+        right:15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<canvas id="stars"></canvas>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<div id="intro">
+
+    <div class="intro-content">
+
+        <div class="intro-small">
+            A little something
+        </div>
+
+        <div class="intro-title">
+            Haloo Wanda Putri Zahra
+        </div>
+
+        <div class="intro-text">
+
+            Sebenarnya ada sesuatu yang ingin ku sampaikan.
+
+            <br>
+
+            Dan kali ini, aku mencoba menyampaikannya
+            dengan cara yang sedikit berbeda.
+
+        </div>
+
+        <button
+            class="open-btn"
+            onclick="openWebsite()"
+        >
+            Buka
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio id="music" loop>
+
+    <source
+        src="c:\Users\rafiq\Downloads\The 1975 - About You (1).mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<button
+    id="musicBtn"
+    onclick="toggleMusic()"
+>
+    ♪
+</button>
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<main>
+
+
+<section class="hero">
+
+    <div class="container reveal">
+
+        <div class="small">
+            seseorang yang menarik perhatian
+        </div>
+
+        <h1>
+            FOR<br>
+            YOU.
+        </h1>
+
+        <p>
+
+            Terima kasih sudah mau membuka ini.
+            Sebenarnya aku sempat bingung harus mulai dari mana.
+            Jadi akhirnya kuputuskan untuk menyampaikannya
+            dengan cara seperti ini.
+            Semoga kamu menikmatinya.
+
+        </p>
+
+    </div>
+
+    <div class="scroll-down">
+        SCROLL
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container reveal">
+
+        <div class="small">
+            01 — ADA SESUATU
+        </div>
+
+        <h2>
+            Ada beberapa hal<br>
+            yang ingin ku tunjukkan.
+        </h2>
+
+        <p>
+
+            Awalnya aku cuma ingin memasukkan beberapa foto.
+            Tapi setelah dipikir-pikir...
+            ternyata memilih foto kamu lebih susah daripada yang kukira.
+
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Bukan karena fotonya kurang bagus.
+            Justru masalahnya terlalu banyak yang bagus.
+
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Jadi kalau nanti fotonya kebanyakan,
+            anggap saja aku sedang kesulitan menentukan pilihan.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container">
+
+        <div class="photo-intro reveal">
+
+            <div class="small">
+                Tentang foto-foto ini
+            </div>
+
+            <h2>
+                Sebenarnya<br>
+                sederhana.
+            </h2>
+
+            <p>
+
+                Aku cuma melihat beberapa foto kamu,
+                lalu entah kenapa ada beberapa yang membuatku berhenti sebentar.
+
+            </p>
+
+            <p style="margin-top:25px;">
+
+                Mungkin buatmu itu cuma foto biasa.
+                Tapi buat seseorang yang mulai tertarik sama kamu...
+                ya, definisi "biasa" ternyata bisa berubah sedikit.
+
+            </p>
+
+            <p style="margin-top:25px;">
+
+                Dan sepertinya aku termasuk orang yang kena.
+
+            </p>
+
+        </div>
+
+
+        <div class="photo-grid">
+
+
+            <!-- FOTO 1 -->
+
+            <div class="photo-frame reveal">
+
+                <img
+                    src="a:\galery pikaaa\WhatsApp Image 2026-10-06 at 14.46.15 (1).jpeg"
+                    onclick="openImage(this.src)"
+                >
+
+                <div class="photo-caption">
+
+                    <h3>
+                        Yang pertama...
+                    </h3>
+
+                    <p>
+
+                        Aku nggak tahu harus menjelaskan apa dari foto ini.
+                        Yang jelas, waktu pertama kali melihatnya,
+                        aku sempat berpikir,
+                        "Oke... ternyata senyum seseorang memang bisa bikin orang lain berhenti scroll."
+
+                        <br><br>
+
+                        Dan ya...
+                        aku orangnya.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 2 -->
+
+            <div class="photo-frame reveal">
+
+                <img
+                    src="a:\galery pikaaa\WhatsApp Image 2026-10-06 at 14.46.15 (2).jpeg"
+                    onclick="openImage(this.src)"
+                >
+
+                <div class="photo-caption">
+
+                    <h3>
+                        Kalau yang ini...
+                    </h3>
+
+                    <p>
+
+                        Senyumnya kelihatan sederhana.
+                        Tapi entah kenapa cukup untuk bikin aku melihatnya
+                        lebih lama dari yang seharusnya.
+
+                        <br><br>
+
+                        Padahal niat awal cuma lihat sebentar.
+                        Ternyata "sebentar" versi aku agak berbeda.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 3 -->
+
+            <div class="photo-frame reveal">
+
+                <img
+                    src="a:\galery pikaaa\WhatsApp Image 2026-10-06 at 14.46.15.jpeg"
+                    onclick="openImage(this.src)"
+                >
+
+                <div class="photo-caption">
+
+                    <h3>
+                        Yang ini juga.
+                    </h3>
+
+                    <p>
+
+                        Nggak ada sesuatu yang terlalu berlebihan.
+                        Justru itu yang kusuka.
+
+                        <br><br>
+
+                        Kadang sesuatu nggak perlu dibuat istimewa
+                        untuk terlihat menarik.
+                        Cukup jadi dirinya sendiri.
+
+                        <br><br>
+
+                        Seperti foto ini.
+                        Atau mungkin... orang di dalamnya.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 4 -->
+
+            <div class="photo-frame reveal">
+
+                <img
+                    src="a:\galery pikaaa\WhatsApp Image 2026-10-07 at 14.10.15.jpeg"
+                    onclick="openImage(this.src)"
+                >
+
+                <div class="photo-caption">
+
+                    <h3>
+                        Oke, yang ini agak bahaya.
+                    </h3>
+
+                    <p>
+
+                        Awalnya aku cuma mau kasih pujian biasa.
+                        Tapi setelah dilihat lagi...
+                        kok malah jadi susah cari kalimat yang biasa?
+
+                        <br><br>
+
+                        Akhirnya aku sadar,
+                        mungkin masalahnya bukan aku yang kehabisan kata.
+                        Mungkin memang kamu yang terlalu menarik
+                        untuk dijelaskan sesederhana itu.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 5 -->
+
+            <div class="photo-frame reveal">
+
+                <img
+                    src="a:\galery pikaaa\WhatsApp Image 2026-10-06 at 14.46.16 (2).jpeg"
+                    onclick="openImage(this.src)"
+                >
+
+                <div class="photo-caption">
+
+                    <h3>
+                        Kalau yang ini...
+                    </h3>
+
+                    <p>
+
+                        Aku suka suasananya.
+                        Ada sesuatu yang tenang dari foto ini.
+
+                        <br><br>
+
+                        Dan anehnya,
+                        aku juga ikut merasa tenang waktu melihatnya.
+                        Padahal cuma foto.
+
+                        <br><br>
+
+                        Mungkin memang ada beberapa orang
+                        yang bahkan tanpa melakukan apa-apa pun
+                        sudah bisa meninggalkan kesan.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 6 -->
+
+            <div class="photo-frame reveal">
+
+                <img
+                    src="a:\galery pikaaa\WhatsApp Image 2026-10-07 at 14.10.14.jpeg"
+                    onclick="openImage(this.src)"
+                >
+
+                <div class="photo-caption">
+
+                    <h3>
+                        Dan terakhir...
+                    </h3>
+
+                    <p>
+
+                        Mungkin ini salah satu yang paling kusukai.
+                        Bukan karena paling sempurna.
+                        Tapi karena kamu terlihat benar-benar bahagia.
+
+                        <br><br>
+
+                        Dan ternyata melihat seseorang yang kita sukai
+                        sedang bahagia itu bisa bikin kita ikut senang juga.
+
+                        <br><br>
+
+                        Agak menyebalkan memang.
+                        Tapi ya begitulah.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="gallery-note reveal">
+
+            Sebenarnya masih ingin memasukkan video,
+            tapi mungkin cukup foto-foto ini dulu.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container reveal">
+
+        <div class="small">
+            03 — TERNYATA BUKAN CUMA SOAL FOTO
+        </div>
+
+        <h2>
+            Ternyata bukan<br>
+            cuma soal foto.
+        </h2>
+
+        <p>
+            Semakin dipikirkan, ternyata bukan cuma soal foto.
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Awalnya mungkin memang dari situ.
+            Tapi lama-lama aku mulai memperhatikan hal-hal kecil lainnya.
+
+        </p>
+
+        <div class="quote">
+
+            Cara kamu ngobrol.<br>
+            Cara kamu merespons sesuatu.<br>
+            Cara kamu menceritakan sesuatu.
+
+        </div>
+
+        <p>
+
+            Hal-hal sederhana yang mungkin menurutmu nggak ada istimewanya.
+            Tapi entah kenapa, justru hal-hal seperti itu
+            yang membuatku semakin penasaran sama kamu.
+
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Sampai akhirnya aku sadar...
+            ternyata aku bukan cuma suka melihatmu.
+            Aku juga ingin mengenalmu.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container reveal">
+
+        <div class="small">
+            04 — MULAI JUJUR
+        </div>
+
+        <h2>
+            Tentang rasa<br>
+            yang mulai kusadari.
+        </h2>
+
+        <p>
+            Nah, bagian ini agak serius sedikit.
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Aku sebenarnya nggak tahu kapan tepatnya rasa itu mulai muncul.
+
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Awalnya cuma tertarik.
+            Lalu penasaran.
+            Lalu mulai sering kepikiran.
+
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Dan kalau sudah sampai tahap sering kepikiran...
+            rasanya agak susah untuk terus pura-pura bilang,
+            "ah, biasa aja."
+
+        </p>
+
+        <p style="margin-top:25px;">
+            Karena ternyata memang nggak biasa.
+        </p>
+
+        <div class="quote">
+            Aku suka kamu.
+        </div>
+
+        <p>
+            Sesederhana itu.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="letter reveal">
+
+        <div class="small">
+            Surat kecil
+        </div>
+
+        <p>
+            Aku sempat mikir berkali-kali,
+            perlu disampaikan atau nggak?
+        </p>
+
+        <p>
+            Takutnya setelah ini malah jadi canggung.
+        </p>
+
+        <p>
+
+            Tapi kalau terus disimpan juga rasanya aneh.
+            Jadi akhirnya aku memilih untuk jujur.
+
+        </p>
+
+        <div class="big">
+            Aku suka kamu.
+        </div>
+
+        <p>
+            Bukan karena aku ingin kamu langsung memberikan jawaban.
+        </p>
+
+        <p>
+            Bukan juga karena aku berharap semuanya harus berubah setelah ini.
+        </p>
+
+        <p>
+            Aku cuma ingin kamu tahu.
+        </p>
+
+        <p>
+
+            Ada seseorang yang ternyata sudah cukup lama
+            memperhatikanmu dengan cara yang sedikit berbeda.
+
+        </p>
+
+        <div class="big">
+
+            Dan orang itu...
+            <br>
+            aku.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container reveal">
+
+        <div class="small">
+            06 — NGGAK PERLU TERBURU-BURU
+        </div>
+
+        <h2>
+            Tenang.
+        </h2>
+
+        <p>
+            Kamu nggak sedang mengikuti ujian.
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Nggak ada soal pilihan ganda.
+            Nggak ada batas waktu.
+            Dan nggak ada tombol "submit answer".
+
+        </p>
+
+        <p style="margin-top:25px;">
+            Aku nggak butuh jawaban sekarang.
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Kalau suatu hari kamu ingin mengenalku lebih jauh,
+            aku akan senang.
+
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Kalau ternyata perasaanmu berbeda,
+            aku juga akan menghargainya.
+
+        </p>
+
+        <div class="quote">
+
+            Pada akhirnya, aku cuma ingin jujur
+            tentang apa yang kurasakan.
+
+        </div>
+
+        <p>
+            Dan aku senang pernah mengenalmu.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container reveal">
+
+        <div class="small">
+            07 — MUNGKIN KITA BISA MULAI
+        </div>
+
+        <h2>
+            Dari hal<br>
+            yang sederhana.
+        </h2>
+
+        <p>
+            Nggak perlu langsung menjadi sesuatu yang besar.
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Mungkin cukup mulai dari ngobrol lebih banyak.
+            Saling mengenal.
+            Saling berbagi cerita.
+
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Dan lihat saja nanti semuanya akan berjalan ke mana.
+
+        </p>
+
+        <p style="margin-top:25px;">
+
+            Aku nggak tahu akhirnya akan seperti apa.
+
+        </p>
+
+        <div class="quote">
+
+            Cerita yang baik nggak harus langsung tahu ending-nya.
+            Kadang cukup tahu bahwa kita ingin membaca halaman berikutnya.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="final">
+
+    <div class="container reveal">
+
+        <div class="small">
+            THE END
+        </div>
+
+        <h2>
+            Wanda...
+        </h2>
+
+        <p>
+
+            Kalau kamu sudah sampai sini,
+            berarti setidaknya satu hal berhasil.
+
+        </p>
+
+        <p>
+            Kamu bertahan sampai akhir.
+        </p>
+
+        <p>
+
+            Terima kasih sudah meluangkan waktu
+            untuk melihat semuanya.
+
+        </p>
+
+        <p>
+
+            Aku nggak tahu setelah ini kamu akan tersenyum,
+            bingung, atau mungkin malah berpikir,
+            "ini orang kenapa niat kali..."
+
+        </p>
+
+        <p>
+            Tapi nggak apa-apa.
+        </p>
+
+        <p>
+            Yang penting sekarang kamu sudah tahu.
+        </p>
+
+        <p>
+
+            Ada seseorang yang awalnya cuma merasa tertarik,
+            lalu perlahan menjadi penasaran,
+            dan akhirnya sadar bahwa perasaannya ternyata
+            lebih dari sekadar itu.
+
+        </p>
+
+        <p>
+            Seseorang yang ingin mengenalmu lebih jauh.
+        </p>
+
+        <p>
+            Seseorang yang suka sama kamu.
+        </p>
+
+        <p>
+            <strong>
+                Dan orang itu adalah aku.
+            </strong>
+        </p>
+
+        <div class="signature">
+
+            Senang bisa mengenalmu.
+
+            <br><br>
+
+            — Raihan
+
+            <br>
+
+            <button
+                class="finale-btn"
+                onclick="openFinale()"
+            >
+                Ikut aku sebentar ✦
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    made with a little courage — Han
+</footer>
+
+
+<!-- =====================================================
+     FINALE
+===================================================== -->
+
+<div id="finale">
+
+    <canvas id="finaleCanvas"></canvas>
+
+    <div id="flash"></div>
+
+    <div id="hint">
+        Geser untuk mengitari · scroll / cubit untuk mendekat
+    </div>
+
+    <button
+        class="finale-back"
+        onclick="closeFinale()"
+    >
+        ← Kembali
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     MODAL
+===================================================== -->
+
+<div
+    id="imageModal"
+    onclick="closeImage()"
+>
+
+    <span class="close-modal">
+        ×
+    </span>
+
+    <img id="modalImage">
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   WEBSITE FUNCTIONS
+===================================================== */
+
+function openWebsite(){
+
+    const intro =
+        document.getElementById("intro");
+
+    intro.style.opacity = "0";
+
+    setTimeout(
+        ()=>{
+            intro.style.display = "none";
+        },
+        1000
+    );
+
+    const music =
+        document.getElementById("music");
+
+    music.play().catch(
+        ()=>{}
+    );
+
+}
+
+
+let musicPlaying = false;
+
+
+function toggleMusic(){
+
+    const music =
+        document.getElementById("music");
+
+    const btn =
+        document.getElementById("musicBtn");
+
+
+    if(musicPlaying){
+
+        music.pause();
+
+        btn.innerHTML = "♪";
+
+        musicPlaying = false;
+
+    }else{
+
+        music.play();
+
+        btn.innerHTML = "Ⅱ";
+
+        musicPlaying = true;
+
+    }
+
+}
+
+
+function openImage(src){
+
+    const modal =
+        document.getElementById(
+            "imageModal"
+        );
+
+    const image =
+        document.getElementById(
+            "modalImage"
+        );
+
+    image.src = src;
+
+    modal.style.display = "flex";
+
+}
+
+
+function closeImage(){
+
+    document.getElementById(
+        "imageModal"
+    ).style.display = "none";
+
+}
+
+
+/* =====================================================
+   REVEAL
+===================================================== */
+
+const reveals =
+    document.querySelectorAll(
+        ".reveal"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if(
+                        entry.isIntersecting
+                    ){
+
+                        entry.target
+                            .classList
+                            .add("active");
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold:.15
+        }
+
+    );
+
+
+reveals.forEach(
+    el =>
+    observer.observe(el)
+);
+
+
+/* =====================================================
+   NORMAL BACKGROUND STARS
+===================================================== */
+
+const canvas =
+    document.getElementById(
+        "stars"
+    );
+
+
+const ctx =
+    canvas.getContext("2d");
+
+
+let stars = [];
+
+
+function resizeCanvas(){
+
+    canvas.width =
+        window.innerWidth;
+
+    canvas.height =
+        window.innerHeight;
+
+}
+
+
+resizeCanvas();
+
+
+window.addEventListener(
+    "resize",
+    resizeCanvas
+);
+
+
+function createStars(){
+
+    stars = [];
+
+    const count =
+        Math.floor(
+            (
+                window.innerWidth *
+                window.innerHeight
+            ) /
+            7000
+        );
+
+    for(
+        let i=0;
+        i<count;
+        i++
+    ){
+
+        stars.push({
+
+            x:
+                Math.random() *
+                canvas.width,
+
+            y:
+                Math.random() *
+                canvas.height,
+
+            r:
+                Math.random()*1.4+.2,
+
+            speed:
+                Math.random()*.25+.05,
+
+            alpha:
+                Math.random(),
+
+            direction:
+                Math.random()>.5
+                ?1
+                :-1
+
+        });
+
+    }
+
+}
+
+
+createStars();
+
+
+window.addEventListener(
+    "resize",
+    createStars
+);
+
+
+function animateStars(){
+
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    stars.forEach(
+        star => {
+
+            star.alpha +=
+                .002 *
+                star.direction;
+
+
+            if(
+                star.alpha>=1
+            ){
+
+                star.alpha=1;
+
+                star.direction=-1;
+
+            }
+
+
+            if(
+                star.alpha<=.15
+            ){
+
+                star.alpha=.15;
+
+                star.direction=1;
+
+            }
+
+
+            star.y -=
+                star.speed;
+
+
+            if(
+                star.y<0
+            ){
+
+                star.y =
+                    canvas.height;
+
+            }
+
+
+            ctx.beginPath();
+
+
+            ctx.arc(
+                star.x,
+                star.y,
+                star.r,
+                0,
+                Math.PI*2
+            );
+
+
+            ctx.fillStyle =
+                `rgba(
+                    255,
+                    255,
+                    255,
+                    ${star.alpha}
+                )`;
+
+
+            ctx.fill();
+
+        }
+    );
+
+
+    requestAnimationFrame(
+        animateStars
+    );
+
+}
+
+
+animateStars();
+
+</script>
+
+
+<!-- =====================================================
+     THREE.JS
+===================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+
+/* =====================================================
+   GALAXY VARIABLES
+===================================================== */
+
+let fScene;
+let fCam;
+let fRenderer;
+
+let galaxy;
+let galaxyBright;
+
+let bgA;
+let bgB;
+
+let warp;
+let warpData;
+let warpPos;
+
+let glows = [];
+
+let fReady = false;
+let fRunning = false;
+
+let t0 = 0;
+let lastT = 0;
+
+
+const ctl = {
+
+    ready:false,
+
+    drag:false,
+
+    theta:0,
+    phi:0,
+    rho:100,
+
+    tTheta:0,
+    tPhi:0,
+    tRho:100
+
+};
+
+
+const WARP_END = 2.7;
+
+const ZOOM_DUR = 7;
+
+
+/* =====================================================
+   UTILITY
+===================================================== */
+
+function clamp(
+    value,
+    min=0,
+    max=1
+){
+
+    return Math.min(
+        max,
+        Math.max(
+            min,
+            value
+        )
+    );
+
+}
+
+
+function lerp(
+    a,
+    b,
+    t
+){
+
+    return a +
+        (
+            b-a
+        )*t;
+
+}
+
+
+/* =====================================================
+   GLOW DOT
+===================================================== */
+
+function softDot(){
+
+    const c =
+        document.createElement(
+            "canvas"
+        );
+
+    c.width =
+        c.height =
+        64;
+
+    const g =
+        c.getContext("2d");
+
+    const grd =
+        g.createRadialGradient(
+            32,
+            32,
+            0,
+            32,
+            32,
+            32
+        );
+
+    grd.addColorStop(
+        0,
+        "rgba(255,255,255,1)"
+    );
+
+    grd.addColorStop(
+        .3,
+        "rgba(255,255,255,.5)"
+    );
+
+    grd.addColorStop(
+        1,
+        "rgba(255,255,255,0)"
+    );
+
+    g.fillStyle =
+        grd;
+
+    g.fillRect(
+        0,
+        0,
+        64,
+        64
+    );
+
+    return new THREE.CanvasTexture(c);
+
+}
+
+
+/* =====================================================
+   POINT CLOUD
+===================================================== */
+
+function mkPoints(
+    positions,
+    colors,
+    size,
+    texture,
+    opacity=1
+){
+
+    const geometry =
+        new THREE.BufferGeometry();
+
+    geometry.setAttribute(
+        "position",
+        new THREE.BufferAttribute(
+            positions,
+            3
+        )
+    );
+
+    if(colors){
+
+        geometry.setAttribute(
+            "color",
+            new THREE.BufferAttribute(
+                colors,
+                3
+            )
+        );
+
+    }
+
+    return new THREE.Points(
+
+        geometry,
+
+        new THREE.PointsMaterial({
+
+            size:size,
+
+            map:texture,
+
+            vertexColors:
+                !!colors,
+
+            transparent:true,
+
+            opacity:opacity,
+
+            depthWrite:false,
+
+            blending:
+                THREE.AdditiveBlending
+
+        })
+
+    );
+
+}
+
+
+/* =====================================================
+   BUILD GALAXY
+===================================================== */
+
+function initFinale(){
+
+    const finaleCanvas =
+        document.getElementById(
+            "finaleCanvas"
+        );
+
+    fRenderer =
+        new THREE.WebGLRenderer({
+
+            canvas:finaleCanvas,
+
+            antialias:true,
+
+            alpha:false
+
+        });
+
+    fRenderer.setPixelRatio(
+        Math.min(
+            window.devicePixelRatio,
+            2
+        )
+    );
+
+    fScene =
+        new THREE.Scene();
+
+    fCam =
+        new THREE.PerspectiveCamera(
+            55,
+            1,
+            .1,
+            1000
+        );
+
+    const dot =
+        softDot();
+
+
+    /* =================================================
+       MAIN GALAXY
+    ================================================= */
+
+    const R = 55;
+
+    const N =
+        window.innerWidth<800
+        ? 30000
+        : 52000;
+
+
+    const positions =
+        new Float32Array(
+            N*3
+        );
+
+
+    const colors =
+        new Float32Array(
+            N*3
+        );
+
+
+    const core =
+        new THREE.Color(
+            0xfff4e0
+        );
+
+
+    const gold =
+        new THREE.Color(
+            0xffc98a
+        );
+
+
+    const rose =
+        new THREE.Color(
+            0xff6f9f
+        );
+
+
+    const violet =
+        new THREE.Color(
+            0x8a5cff
+        );
+
+
+    const blue =
+        new THREE.Color(
+            0x4f7dff
+        );
+
+
+    const whiteBlue =
+        new THREE.Color(
+            0xbfe0ff
+        );
+
+
+    function gauss(){
+
+        return (
+            Math.random()+
+            Math.random()+
+            Math.random()-
+            1.5
+        )/1.5;
+
+    }
+
+
+    for(
+        let i=0;
+        i<N;
+        i++
+    ){
+
+        let x;
+        let y;
+        let z;
+
+        let color;
+
+
+        if(
+            i<N*.2
+        ){
+
+            const r =
+                Math.pow(
+                    Math.random(),
+                    1.5
+                )*9;
+
+
+            const theta =
+                Math.random()*
+                Math.PI*2;
+
+
+            const phi =
+                Math.acos(
+                    2*Math.random()-1
+                );
+
+
+            x =
+                r*
+                Math.sin(phi)*
+                Math.cos(theta);
+
+
+            y =
+                r*
+                Math.cos(phi)*
+                .55;
+
+
+            z =
+                r*
+                Math.sin(phi)*
+                Math.sin(theta);
+
+
+            color =
+                core
+                    .clone()
+                    .lerp(
+                        gold,
+                        r/9
+                    );
+
+
+        }else{
+
+
+            const r =
+                3+
+                Math.pow(
+                    Math.random(),
+                    1.35
+                )*
+                (R-3);
+
+
+            const theta =
+                (i%4)/4*
+                Math.PI*2+
+                r*.13;
+
+
+            const width =
+                1.2+
+                r*.07;
+
+
+            x =
+                Math.cos(theta)*r+
+                gauss()*width;
+
+
+            z =
+                Math.sin(theta)*r+
+                gauss()*width;
+
+
+            y =
+                gauss()*
+                Math.max(
+                    .3,
+                    2.6-r*.045
+                );
+
+
+            const k =
+                r/R;
+
+
+            if(k<.3){
+
+                color =
+                    gold
+                        .clone()
+                        .lerp(
+                            rose,
+                            k/.3
+                        );
+
+            }else if(k<.65){
+
+                color =
+                    rose
+                        .clone()
+                        .lerp(
+                            violet,
+                            (k-.3)/.35
+                        );
+
+            }else{
+
+                color =
+                    violet
+                        .clone()
+                        .lerp(
+                            blue,
+                            (k-.65)/.35
+                        );
+
+            }
+
+
+            if(
+                Math.random()<.08
+            ){
+
+                color =
+                    whiteBlue.clone();
+
+            }
+
+
+            color.multiplyScalar(
+                .7+
+                Math.random()*.5
+            );
+
+        }
+
+
+        positions[i*3] =
+            x;
+
+
+        positions[i*3+1] =
+            y;
+
+
+        positions[i*3+2] =
+            z;
+
+
+        colors[i*3] =
+            color.r;
+
+
+        colors[i*3+1] =
+            color.g;
+
+
+        colors[i*3+2] =
+            color.b;
+
+    }
+
+
+    galaxy =
+        mkPoints(
+            positions,
+            colors,
+            .34,
+            dot,
+            0
+        );
+
+
+    galaxy.rotation.z =
+        .22;
+
+
+    fScene.add(
+        galaxy
+    );
+
+
+    /* =================================================
+       BRIGHT PARTICLES
+    ================================================= */
+
+    const B = 3000;
+
+
+    const bp =
+        new Float32Array(
+            B*3
+        );
+
+
+    const bc =
+        new Float32Array(
+            B*3
+        );
+
+
+    for(
+        let i=0;
+        i<B;
+        i++
+    ){
+
+        const r =
+            4+
+            Math.pow(
+                Math.random(),
+                1.2
+            )*
+            (R-4);
+
+
+        const theta =
+            (i%4)/4*
+            Math.PI*2+
+            r*.13;
+
+
+        const width =
+            1+
+            r*.06;
+
+
+        bp[i*3] =
+            Math.cos(theta)*r+
+            gauss()*width;
+
+
+        bp[i*3+1] =
+            gauss()*1.2;
+
+
+        bp[i*3+2] =
+            Math.sin(theta)*r+
+            gauss()*width;
+
+
+        const color =
+            new THREE.Color();
+
+
+        color.setHSL(
+            Math.random()<.5
+            ? .09
+            : .6,
+            .6,
+            .82+
+            Math.random()*.18
+        );
+
+
+        bc[i*3] =
+            color.r;
+
+
+        bc[i*3+1] =
+            color.g;
+
+
+        bc[i*3+2] =
+            color.b;
+
+    }
+
+
+    galaxyBright =
+        mkPoints(
+            bp,
+            bc,
+            1.1,
+            dot,
+            0
+        );
+
+
+    galaxy.add(
+        galaxyBright
+    );
+
+
+    /* =================================================
+       CORE GLOW
+    ================================================= */
+
+    glows = [
+
+        [0xffc98a,38,.55],
+
+        [0xfff4e0,13,.9]
+
+    ].map(
+        item => {
+
+            const sprite =
+                new THREE.Sprite(
+
+                    new THREE.SpriteMaterial({
+
+                        map:dot,
+
+                        color:item[0],
+
+                        transparent:true,
+
+                        opacity:0,
+
+                        depthWrite:false,
+
+                        blending:
+                            THREE.AdditiveBlending
+
+                    })
+
+                );
+
+
+            sprite.scale.set(
+                item[1],
+                item[1],
+                1
+            );
+
+
+            sprite.userData.op =
+                item[2];
+
+
+            galaxy.add(
+                sprite
+            );
+
+
+            return sprite;
+
+        }
+    );
+
+
+    /* =================================================
+       NEBULA
+    ================================================= */
+
+    const nebulas = [
+
+        [0x7a3cff,-80,18,-50,200],
+
+        [0xff4f8b,70,-20,-85,210],
+
+        [0x3c7bff,-20,45,85,180],
+
+        [0xe6c8a5,95,30,60,160],
+
+        [0xb03cff,-105,-35,35,170],
+
+        [0x2fd0ff,30,-50,-90,150],
+
+        [0xff8a3c,-60,40,95,140],
+
+        [0xff4f8b,0,-10,0,120]
+
+    ];
+
+
+    nebulas.forEach(
+        data => {
+
+            const sprite =
+                new THREE.Sprite(
+
+                    new THREE.SpriteMaterial({
+
+                        map:dot,
+
+                        color:data[0],
+
+                        transparent:true,
+
+                        opacity:.13,
+
+                        depthWrite:false,
+
+                        blending:
+                            THREE.AdditiveBlending
+
+                    })
+
+                );
+
+
+            sprite.position.set(
+                data[1],
+                data[2],
+                data[3]
+            );
+
+
+            sprite.scale.set(
+                data[4],
+                data[4],
+                1
+            );
+
+
+            fScene.add(
+                sprite
+            );
+
+        }
+    );
+
+
+    /* =================================================
+       BACKGROUND STARS
+    ================================================= */
+
+    function createBackground(
+        count
+    ){
+
+        const p =
+            new Float32Array(
+                count*3
+            );
+
+
+        const c =
+            new Float32Array(
+                count*3
+            );
+
+
+        for(
+            let i=0;
+            i<count;
+            i++
+        ){
+
+            const u =
+                Math.random()*2-1;
+
+
+            const theta =
+                Math.random()*
+                Math.PI*2;
+
+
+            const radius =
+                280+
+                Math.random()*250;
+
+
+            const s =
+                Math.sqrt(
+                    1-u*u
+                );
+
+
+            p[i*3] =
+                radius*s*Math.cos(theta);
+
+
+            p[i*3+1] =
+                radius*u;
+
+
+            p[i*3+2] =
+                radius*s*Math.sin(theta);
+
+
+            const col =
+                new THREE.Color();
+
+
+            col.setHSL(
+                .55+
+                Math.random()*.15,
+                .5,
+                .7+
+                Math.random()*.3
+            );
+
+
+            c[i*3] =
+                col.r;
+
+
+            c[i*3+1] =
+                col.g;
+
+
+            c[i*3+2] =
+                col.b;
+
+        }
+
+
+        return mkPoints(
+            p,
+            c,
+            2.7,
+            dot,
+            0
+        );
+
+    }
+
+
+    bgA =
+        createBackground(1800);
+
+
+    bgB =
+        createBackground(1800);
+
+
+    fScene.add(
+        bgA,
+        bgB
+    );
+
+
+    /* =================================================
+       WARP
+    ================================================= */
+
+    const W = 650;
+
+
+    warpPos =
+        new Float32Array(
+            W*6
+        );
+
+
+    const warpColors =
+        new Float32Array(
+            W*6
+        );
+
+
+    warpData = [];
+
+
+    for(
+        let i=0;
+        i<W;
+        i++
+    ){
+
+        const angle =
+            Math.random()*
+            Math.PI*2;
+
+
+        const radius =
+            2+
+            Math.random()*38;
+
+
+        warpData.push({
+
+            x:
+                Math.cos(angle)*radius,
+
+            y:
+                Math.sin(angle)*radius,
+
+            z:
+                -Math.random()*260
+
+        });
+
+
+        const color =
+            new THREE.Color()
+                .setHSL(
+                    .08+
+                    Math.random()*.55,
+                    .5,
+                    .8
+                );
+
+
+        warpColors.set(
+            [
+                color.r,
+                color.g,
+                color.b,
+                color.r,
+                color.g,
+                color.b
+            ],
+            i*6
+        );
+
+    }
+
+
+    const warpGeometry =
+        new THREE.BufferGeometry();
+
+
+    warpGeometry.setAttribute(
+        "position",
+        new THREE.BufferAttribute(
+            warpPos,
+            3
+        )
+    );
+
+
+    warpGeometry.setAttribute(
+        "color",
+        new THREE.BufferAttribute(
+            warpColors,
+            3
+        )
+    );
+
+
+    warp =
+        new THREE.LineSegments(
+
+            warpGeometry,
+
+            new THREE.LineBasicMaterial({
+
+                vertexColors:true,
+
+                transparent:true,
+
+                depthWrite:false,
+
+                blending:
+                    THREE.AdditiveBlending
+
+            })
+
+        );
+
+
+    warp.frustumCulled =
+        false;
+
+
+    fScene.add(
+        warp
+    );
+
+
+    /* =================================================
+       EVENTS
+    ================================================= */
+
+    window.addEventListener(
+        "resize",
+        fResize
+    );
+
+
+    setupControls();
+
+
+    fResize();
+
+
+    fReady = true;
+
+}
+
+
+/* =====================================================
+   RESIZE
+===================================================== */
+
+function fResize(){
+
+    if(!fRenderer)
+        return;
+
+
+    fRenderer.setSize(
+        window.innerWidth,
+        window.innerHeight,
+        false
+    );
+
+
+    fCam.aspect =
+        window.innerWidth/
+        window.innerHeight;
+
+
+    fCam.updateProjectionMatrix();
+
+}
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+function setupControls(){
+
+    const canvas =
+        document.getElementById(
+            "finaleCanvas"
+        );
+
+
+    const pointers =
+        new Map();
+
+
+    let pinchDistance = 0;
+
+
+    function getPinchDistance(){
+
+        const values =
+            [
+                ...pointers.values()
+            ];
+
+
+        if(
+            values.length<2
+        )
+            return 1;
+
+
+        const a =
+            values[0];
+
+
+        const b =
+            values[1];
+
+
+        return Math.hypot(
+            a.x-b.x,
+            a.y-b.y
+        );
+
+    }
+
+
+    canvas.addEventListener(
+        "pointerdown",
+        event => {
+
+            canvas.setPointerCapture(
+                event.pointerId
+            );
+
+
+            pointers.set(
+                event.pointerId,
+                {
+                    x:event.clientX,
+                    y:event.clientY
+                }
+            );
+
+
+            ctl.drag = true;
+
+
+            if(
+                pointers.size===2
+            ){
+
+                pinchDistance =
+                    getPinchDistance();
+
+            }
+
+        }
+    );
+
+
+    canvas.addEventListener(
+        "pointermove",
+        event => {
+
+            const pointer =
+                pointers.get(
+                    event.pointerId
+                );
+
+
+            if(
+                !pointer ||
+                !ctl.ready
+            )
+                return;
+
+
+            const dx =
+                event.clientX-
+                pointer.x;
+
+
+            const dy =
+                event.clientY-
+                pointer.y;
+
+
+            pointer.x =
+                event.clientX;
+
+
+            pointer.y =
+                event.clientY;
+
+
+            if(
+                pointers.size===1
+            ){
+
+                ctl.tTheta -=
+                    dx*.006;
+
+
+                ctl.tPhi =
+                    clamp(
+                        ctl.tPhi-
+                        dy*.006,
+                        .08,
+                        Math.PI-.08
+                    );
+
+            }else{
+
+                const distance =
+                    getPinchDistance();
+
+
+                ctl.tRho =
+                    clamp(
+                        ctl.tRho*
+                        (
+                            pinchDistance/
+                            distance
+                        ),
+                        25,
+                        220
+                    );
+
+
+                pinchDistance =
+                    distance;
+
+            }
+
+        }
+    );
+
+
+    function endPointer(
+        event
+    ){
+
+        pointers.delete(
+            event.pointerId
+        );
+
+
+        if(
+            pointers.size===0
+        ){
+
+            ctl.drag =
+                false;
+
+        }
+
+    }
+
+
+    canvas.addEventListener(
+        "pointerup",
+        endPointer
+    );
+
+
+    canvas.addEventListener(
+        "pointercancel",
+        endPointer
+    );
+
+
+    canvas.addEventListener(
+        "wheel",
+        event => {
+
+            event.preventDefault();
+
+
+            if(
+                !ctl.ready
+            )
+                return;
+
+
+            ctl.tRho =
+                clamp(
+                    ctl.tRho*
+                    Math.exp(
+                        event.deltaY*.0012
+                    ),
+                    25,
+                    220
+                );
+
+        },
+        {
+            passive:false
+        }
+    );
+
+}
+
+
+/* =====================================================
+   GALAXY LOOP
+===================================================== */
+
+function fLoop(now){
+
+    if(
+        !fRunning
+    )
+        return;
+
+
+    const elapsed =
+        (now-t0)/1000;
+
+
+    const dt =
+        Math.min(
+            .05,
+            elapsed-lastT
+        );
+
+
+    lastT =
+        elapsed;
+
+
+    /* =================================================
+       WARP
+    ================================================= */
+
+    const warpProgress =
+        clamp(
+            elapsed/WARP_END
+        );
+
+
+    const speed =
+        30+
+        330*
+        warpProgress*
+        warpProgress;
+
+
+    const lineLength =
+        3+
+        speed*.045;
+
+
+    for(
+        let i=0;
+        i<warpData.length;
+        i++
+    ){
+
+        const star =
+            warpData[i];
+
+
+        star.z +=
+            speed*dt;
+
+
+        if(
+            star.z>2
+        ){
+
+            star.z -=
+                260;
+
+        }
+
+
+        warpPos.set(
+
+            [
+                star.x,
+                star.y,
+                star.z,
+
+                star.x,
+                star.y,
+                star.z-lineLength
+            ],
+
+            i*6
+
+        );
+
+    }
+
+
+    warp.geometry
+        .attributes
+        .position
+        .needsUpdate = true;
+
+
+    warp.material.opacity =
+        elapsed<
+        WARP_END-.4
+
+        ?
+
+        1
+
+        :
+
+        clamp(
+            1-
+            (
+                elapsed-
+                (
+                    WARP_END-.4
+                )
+            )/.8
+        );
+
+
+    /* =================================================
+       CAMERA
+    ================================================= */
+
+    const zoom =
+        clamp(
+            (
+                elapsed-
+                WARP_END
+            )/
+            7
+        );
+
+
+    const ease =
+        1-
+        Math.pow(
+            1-zoom,
+            3
+        );
+
+
+    if(
+        zoom<1
+    ){
+
+        const angle =
+            ease*1.1;
+
+
+        const distance =
+            lerp(
+                8,
+                112,
+                ease
+            );
+
+
+        const height =
+            lerp(
+                .5,
+                52,
+                ease
+            );
+
+
+        fCam.position.set(
+
+            Math.sin(angle)*
+            distance,
+
+            height,
+
+            Math.cos(angle)*
+            distance
+
+        );
+
+
+        ctl.ready =
+            false;
+
+    }else{
+
+        if(
+            !ctl.ready
+        ){
+
+            ctl.rho =
+                ctl.tRho =
+                125;
+
+
+            ctl.phi =
+                ctl.tPhi =
+                1.13;
+
+
+            ctl.theta =
+                ctl.tTheta =
+                1.1;
+
+
+            ctl.ready =
+                true;
+
+
+            const hint =
+                document.getElementById(
+                    "hint"
+                );
+
+
+            hint.classList.add(
+                "in"
+            );
+
+
+            setTimeout(
+                ()=>{
+                    hint.classList.remove(
+                        "in"
+                    );
+                },
+                6500
+            );
+
+        }
+
+
+        if(
+            !ctl.drag
+        ){
+
+            ctl.tTheta +=
+                dt*.04;
+
+        }
+
+
+        const smooth =
+            1-
+            Math.exp(
+                -dt*8
+            );
+
+
+        ctl.theta +=
+            (
+                ctl.tTheta-
+                ctl.theta
+            )*
+            smooth;
+
+
+        ctl.phi +=
+            (
+                ctl.tPhi-
+                ctl.phi
+            )*
+            smooth;
+
+
+        ctl.rho +=
+            (
+                ctl.tRho-
+                ctl.rho
+            )*
+            smooth;
+
+
+        const sinPhi =
+            Math.sin(
+                ctl.phi
+            );
+
+
+        fCam.position.set(
+
+            ctl.rho*
+            sinPhi*
+            Math.sin(
+                ctl.theta
+            ),
+
+            ctl.rho*
+            Math.cos(
+                ctl.phi
+            ),
+
+            ctl.rho*
+            sinPhi*
+            Math.cos(
+                ctl.theta
+            )
+
+        );
+
+    }
+
+
+    fCam.lookAt(
+        0,
+        0,
+        0
+    );
+
+
+    /* =================================================
+       REVEAL GALAXY
+    ================================================= */
+
+    const reveal =
+        clamp(
+            (
+                elapsed-
+                WARP_END
+            )/
+            2
+        );
+
+
+    galaxy.material.opacity =
+        reveal;
+
+
+    galaxyBright.material.opacity =
+        reveal;
+
+
+    glows.forEach(
+        (glow,index)=>{
+
+            glow.material.opacity =
+                reveal*
+                glow.userData.op*
+                (
+                    .85+
+                    .15*
+                    Math.sin(
+                        elapsed*1.5+
+                        index
+                    )
+                );
+
+        }
+    );
+
+
+    /* =================================================
+       GALAXY ROTATION
+    ================================================= */
+
+    galaxy.rotation.y =
+        elapsed*.03;
+
+
+    /* =================================================
+       BACKGROUND
+    ================================================= */
+
+    bgA.material.opacity =
+        reveal*.8;
+
+
+    bgB.material.opacity =
+        reveal*.55;
+
+
+    /* =================================================
+       RENDER
+    ================================================= */
+
+    fRenderer.render(
+        fScene,
+        fCam
+    );
+
+
+    requestAnimationFrame(
+        fLoop
+    );
+
+}
+
+
+/* =====================================================
+   OPEN FINALE
+===================================================== */
+
+function openFinale(){
+
+    if(
+        typeof THREE===
+        "undefined"
+    ){
+
+        alert(
+            "Three.js belum berhasil dimuat."
+        );
+
+        return;
+
+    }
+
+
+    if(
+        !fReady
+    ){
+
+        try{
+
+            initFinale();
+
+        }catch(error){
+
+            console.error(
+                error
+            );
+
+            alert(
+                "Galaxy gagal dimuat. Coba refresh halaman."
+            );
+
+            return;
+
+        }
+
+    }
+
+
+    document
+        .getElementById(
+            "finale"
+        )
+        .classList
+        .add("show");
+
+
+    t0 =
+        performance.now();
+
+
+    lastT = 0;
+
+
+    fRunning = true;
+
+
+    requestAnimationFrame(
+        fLoop
+    );
+
+}
+
+
+/* =====================================================
+   CLOSE FINALE
+===================================================== */
+
+function closeFinale(){
+
+    document
+        .getElementById(
+            "finale"
+        )
+        .classList
+        .remove("show");
+
+
+    setTimeout(
+        ()=>{
+            fRunning=false;
+        },
+        1000
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
